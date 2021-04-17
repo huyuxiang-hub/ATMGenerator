@@ -1,0 +1,9 @@
+package Atm
+
+use ROOT  v* Externals
+use CLHEP v* Externals
+use ProtonDecay v* Generator
+
+application Atm *.cc
+
+

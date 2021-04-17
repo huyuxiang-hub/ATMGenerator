@@ -1,0 +1,30 @@
+application Atm -prototypes -no_modules *.cc
+make_fragment make_header /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/make_header
+make_fragment dependencies /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/dependencies
+make_fragment cleanup_header /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/cleanup_header
+make_fragment java_header /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/java_header
+make_fragment application_header /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/application_header
+make_fragment application /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/application
+make_fragment check_java /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/check_java
+make_fragment cleanup_application /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/cleanup_application
+make_fragment cleanup_objects /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/cleanup_objects
+make_fragment check_application /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/check_application
+make_fragment fortran /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/fortran
+make_fragment c /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/c
+make_fragment cpp /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/cpp
+make_fragment java /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/java
+make_fragment yacc /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/yacc
+make_fragment lex /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/lex
+make_fragment protos_header /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/protos_header
+make_fragment buildproto /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/buildproto
+make_fragment dependencies_and_triggers /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/dependencies_and_triggers
+make_fragment java /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/java
+make_fragment java_copy /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/java_copy
+make_fragment cleanup /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/cleanup
+make_fragment cleanup_java /cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v2r0-branch/ExternalLibs/CMT/v1r26/mgr/fragments/cleanup_java
+language fortran -suffix=f -suffix=F -linker=$(flink) -preprocessor_command=$(ppcmd)
+language c -suffix=c -linker=$(clink) -prototypes -dependencies_options=
+language c++ -suffix=C -suffix=cc -suffix=cxx -suffix=cpp -linker=$(cpplink) -fragment=cpp -dependencies_options=
+language java -suffix=java -linker=java
+language yacc -suffix=y -linker=$(clink) -prototypes
+language lex -suffix=l -linker=$(clink) -prototypes
